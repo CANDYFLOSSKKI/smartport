@@ -1,0 +1,40 @@
+server:
+  port: 11088
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://8.130.85.62:3306/data?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: 603778
+    type: com.alibaba.druid.pool.DruidDataSource
+    initial-size: 10
+    remove-abandoned-timeout: 1800
+    remove-abandoned: true
+    keepAlive: true
+  main:
+    allow-circular-references: true
+  mail:
+    host: smtp.163.com
+    username: cteyneuron@163.com
+    password: VVJPRMJXXKYBPCFD
+    port: 465
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+            socketFactory:
+              class: javax.net.ssl.SSLSocketFactory
+          starttls:
+            enable: true
+            required: true
+        imap:
+          ssl:
+            socketFactory:
+              fallback: false
+mybatis-plus:
+  configuration:
+    call-setters-on-nulls: true
+
+
