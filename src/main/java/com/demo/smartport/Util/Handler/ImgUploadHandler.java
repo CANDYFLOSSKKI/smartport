@@ -25,7 +25,7 @@ public class ImgUploadHandler {
         }
         HashMap<String,String> header=new HashMap<>();
         header.put("Accept","application/vnd.github+json");
-        header.put("Authorization","Bearer "+"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");
+        header.put("Authorization","Bearer "+ImgBedGithubConfig.ACCESS_TOKEN);
         header.put("X-Github-Api-Version","2022-11-28");
         String params=JSON.toJSONString(new ImgUploadReq(ImgBedGithubConfig.ADD_MESSAGE, Base64.encode(file.getBytes())));
         String url= ImgBedGithubConfig.USER_URL()+ ImgParamHandler.getUUID(file.getOriginalFilename());
@@ -42,7 +42,7 @@ public class ImgUploadHandler {
         }
         HashMap<String,String> header=new HashMap<>();
         header.put("Accept","application/vnd.github+json");
-        header.put("Authorization","Bearer "+"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");
+        header.put("Authorization","Bearer "+ImgBedGithubConfig.ACCESS_TOKEN);
         header.put("X-Github-Api-Version","2022-11-28");
         String params=JSON.toJSONString(new ImgUploadReq(ImgBedGithubConfig.ADD_MESSAGE, Base64.encode(file.getBytes())));
         String url= ImgBedGithubConfig.LICENSE_URL()+ ImgParamHandler.getUUID(file.getOriginalFilename());
@@ -56,7 +56,7 @@ public class ImgUploadHandler {
         assert name!=null;
         HashMap<String,String> header=new HashMap<>();
         header.put("Accept","application/vnd.github+json");
-        header.put("Authorization","Bearer "+"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");
+        header.put("Authorization","Bearer "+ImgBedGithubConfig.ACCESS_TOKEN);
         header.put("X-Github-Api-Version","2022-11-28");
         String params=JSON.toJSONString(new ImgUploadReq(ImgBedGithubConfig.ADD_MESSAGE, Base64.encode(file.getBytes())));
         String url= ImgBedGithubConfig.ENTRUST_URL()+ ImgParamHandler.getUUID(file.getOriginalFilename());
@@ -70,7 +70,7 @@ public class ImgUploadHandler {
         assert name!=null;
         HashMap<String,String> header=new HashMap<>();
         header.put("Accept","application/vnd.github+json");
-        header.put("Authorization","Bearer "+"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");
+        header.put("Authorization","Bearer "+ImgBedGithubConfig.ACCESS_TOKEN);
         header.put("X-Github-Api-Version","2022-11-28");
         String params=JSON.toJSONString(new ImgUploadReq(ImgBedGithubConfig.ADD_MESSAGE, Base64.encode(file.getBytes())));
         String url= ImgBedGithubConfig.ORDER_URL()+ ImgParamHandler.getUUID(file.getOriginalFilename());
